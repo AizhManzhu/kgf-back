@@ -1,0 +1,8 @@
+MERCHANT_CERTIFICATE_ID = "b338e9936774214b"				; Серийный номер сертификата Cert Serial Number
+MERCHANT_NAME = "CENT.KZ"				; Название магазина (продавца) Shop/merchant Name
+PRIVATE_KEY_FN = "~/Desktop/work/kgf/kgf-back/app/Payment/kkbsertsn/cert.prv"				; Путь к закрытому ключу Private cert path
+PRIVATE_KEY_PASS = "WDfUveEf9i3"					; Пароль к закрытому ключу Private cert password
+XML_TEMPLATE_FN = "/var/www/vhosts/k50.kz/cent.kz/kkbsertsn/template.xml"			; Путь к XML шаблону XML template path
+XML_COMMAND_TEMPLATE_FN = "/var/www/vhosts/k50.kz/cent.kz/kkbsertsn/command_template.xml"	; Путь к XML шаблону для команд (возврат/подтверждение)
+PUBLIC_KEY_FN = "/var/www/vhosts/k50.kz/cent.kz/kkbsertsn/kkbca.pem"				; Путь к открытому ключу Public cert path
+MERCHANT_ID="92399971"						; Терминал ИД в банковской Системе

@@ -1,0 +1,36 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  PROJECT_NAME: KGF
+
+include:
+  - project: 'devops/ci-templates'
+    file: '/php-nginx/gitlab-ci.yml'
+
+################# Production #################
+
+build-docker:
+  extends: .build
+  stage: build
+
+  tags:
+    - shell
+
+  only:
+    - master
+    # https://www.cloudsigma.com/deploying-laravel-nginx-and-mysql-with-docker-compose/
+    # https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose-ru
+
+  variables:
+    ENV: prod
+    TAG: latest
+
+################# /Production #################
+
+deploy-app:
+  stage: deploy
+  only:
+    - master
+  trigger: kgf/kgf-bot
